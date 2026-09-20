@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>個人報名</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>個人報名 Individual Registration</h1>
+    <form action="" onsubmit="return showSubmitMessage();">
+      <fieldset>
+        <legend>基本資料 / Basic Information</legend>
+        <label>
+          姓名 / Name<span id="required">*</span>
+          <input type="text" name="name" placeholder="請輸入姓名" required />
+        </label>
+
+        <label>
+          性別 / Gender
+          <input type="radio" name="gender" value="male" />
+          <span>男 / male</span>
+          <input type="radio" name="gender" value="female" />
+          <span>女 / female</span>
+        </label>
+
+        <label>
+          國籍 / Nationality
+          <input type="radio" name="nationality" value="ROC" />
+          <span>本國國籍 / ROC Citizens</span>
+          <input type="radio" name="nationality" value="Non-citizens" />
+          <span>外國國籍 / Non Citizens</span>
+        </label>
+
+        <label>
+          身分證號 / ID Number<span id="required">*</span>
+          <input
+            type="text"
+            name="ID-Number"
+            placeholder="身分證或護照號碼"
+            pattern="[A-Z0-9]{10}"
+            maxlength="10"
+            required
+          />
+        </label>
+
+        <label>
+          出生日期 / Date Of Birth
+          <select name="year">
+            <option value="年Year" selected>年Year</option>
+            <option value="1998">1990</option>
+            <option value="1998">1991</option>
+            <option value="1998">1992</option>
+            <option value="1998">1993</option>
+            <option value="1998">1994</option>
+            <option value="1998">1995</option>
+            <option value="1998">1996</option>
+            <option value="1998">1997</option>
+            <option value="1998">1998</option>
+            <option value="1999">1999</option>
+            <option value="2000">2000</option>
+            <option value="1998">2001</option>
+            <option value="1999">2002</option>
+            <option value="2000">2003</option>
+            <option value="1998">2004</option>
+            <option value="1999">2005</option>
+            <option value="2000">2006</option>
+            <option value="1998">2007</option>
+            <option value="1998">2008</option>
+            <option value="1998">2009</option>
+            <option value="1998">2010</option>
+          </select>
+
+          <select name="month">
+            <option value="月Month" selected>月Month</option>
+            <option value="Jan.">1</option>
+            <option value="Feb.">2</option>
+            <option value="Mar.">3</option>
+            <option value="Jan.">4</option>
+            <option value="Feb.">5</option>
+            <option value="Mar.">6</option>
+            <option value="Jan.">7</option>
+            <option value="Feb.">8</option>
+            <option value="Mar.">9</option>
+            <option value="Jan.">10</option>
+            <option value="Feb.">11</option>
+            <option value="Feb.">12</option>
+          </select>
+
+          <select name="day">
+            <option value="日Day" selected>日Day</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="1">11</option>
+            <option value="2">12</option>
+            <option value="3">13</option>
+            <option value="4">14</option>
+            <option value="5">15</option>
+            <option value="6">16</option>
+            <option value="7">17</option>
+            <option value="8">18</option>
+            <option value="9">19</option>
+            <option value="10">20</option>
+            <option value="1">21</option>
+            <option value="2">22</option>
+            <option value="3">23</option>
+            <option value="4">24</option>
+            <option value="5">25</option>
+            <option value="6">26</option>
+            <option value="7">27</option>
+            <option value="8">28</option>
+            <option value="9">29</option>
+            <option value="10">30</option>
+            <option value="10">31</option>
+          </select>
+        </label>
+
+        <label>
+          電子信箱 / Email<span id="required">*</span>
+          <input
+            type="email"
+            name="email"
+            placeholder="example@mail.com"
+            required
+          />
+        </label>
+
+        <label>
+          聯絡電話 / Contact Number
+
+          <span>手機 / Mobile</span>
+          <input
+            type="tel"
+            name="mobile"
+            placeholder="0912345678"
+            pattern="[0-9]{10}"
+            maxlength="10"
+          />
+
+          <span>住家 / Home</span>
+          <input
+            type="tel"
+            name="home-phone"
+            placeholder="0286681234"
+            pattern="[0-9]{10}"
+            maxlength="10"
+          />
+
+          <span>公司 / Office</span>
+          <input
+            type="tel"
+            name="office-phone"
+            pattern="[0-9]{10}"
+            maxlength="10"
+          />
+        </label>
+
+        <label>
+          通訊地址 / Mailing Address
+          <select name="mailing-address">
+            <option value="country/city" selected>
+              請選擇縣市別 Country/City
+            </option>
+            <option value="KEL">基隆市</option>
+            <option value="TPE">台北市</option>
+            <option value="NTP">新北市</option>
+            <option value="TYC">桃園市</option>
+            <option value="HCC">新竹市</option>
+            <option value="HCH">新竹縣</option>
+            <option value="MLO">苗栗縣</option>
+            <option value="TXG">臺中市</option>
+            <option value="CHA">彰化縣</option>
+            <option value="NTO">南投縣</option>
+            <option value="YUN">雲林縣</option>
+            <option value="CYI">嘉義市</option>
+            <option value="CYQ">嘉義縣</option>
+            <option value="TNN">臺南市</option>
+            <option value="KHH">高雄市</option>
+            <option value="PIF">屏東縣</option>
+            <option value="ILA">宜蘭縣</option>
+            <option value="HUN">花蓮縣</option>
+            <option value="TTT">臺東縣</option>
+            <option value="PEN">澎湖縣</option>
+            <option value="KNH">金門縣</option>
+            <option value="LNN">連江縣</option>
+          </select>
+          <input
+            type="text"
+            name="postal-code"
+            placeholder="郵遞區號"
+            maxlength="5"
+            size="5"
+          />
+          <input
+            type="text"
+            name="address"
+            placeholder="例如：昌吉街55號2樓206室"
+          />
+        </label>
+
+        <label>
+          緊急聯絡人姓名 / Name of Emergency Contact
+          <input type="text" name="name-of-emergency-contact" />
+          <span>關係 / Relationship</span>
+          <input type="text" name="relationship" />
+          <span>電話 / Phone</span>
+          <input
+            type="text"
+            name="phone-of-emergency-contact"
+            pattern="[0-9]{10}"
+          />
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>競賽項目資料 / Race Category Information</legend>
+        <label>
+          <input type="checkbox" name="race-category" value="9KM" />
+          <span>9KM (NTD 800)</span>
+          <select name="clothes-size-9KM">
+            <option value="" selected>請選擇衣服尺寸</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+            <option value="XXL">XXL</option>
+          </select>
+        </label>
+
+        <label>
+          <input type="checkbox" name="race-category" value="3KM" />
+          <span>3KM (NTD 650)</span>
+          <select name="clothes-size-3KM">
+            <option value="" selected>請選擇衣服尺寸</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+            <option value="XXL">XXL</option>
+          </select>
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>報到方式(二選一) / Check-in Method</legend>
+        <label>
+          郵寄代理報到 / Postal delivery check-in
+          <input type="radio" name="postal-delivery" value="yes" />
+          <span>是 / Y (需額外付費，限台灣本島)</span>
+          <input
+            type="radio"
+            id="check-in"
+            name="postal-delivery"
+            value="no"
+            checked
+          />
+          <span>否 / N </span>
+        </label>
+
+        <label>
+          <input type="radio" name="location" checked />
+          <span>地點：花博爭豔館（台北市中山區玉門街1號）</span>
+          <span>時間：</span>
+          <input type="date" name="start-date" />
+          <span>~</span>
+          <input type="date" name="end-date" />
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>其他 / Others</legend>
+        <label>
+          個人網站 / Website (選填)
+          <input type="text" name="website" placeholder="http://" />
+        </label>
+
+        <label>
+          備註 / Note
+          <textarea
+            name="note"
+            placeholder="如有特殊需求請於此說明"
+            rows="4"
+            cols="50"
+          ></textarea>
+        </label>
+
+        <label>
+          上傳證件照 / Upload Photo
+          <input type="file" name="photo" />
+        </label>
+      </fieldset>
+
+      <input type="submit" value="送出報名" class="submit-btn" />
+      <input
+        type="reset"
+        value="清除重填"
+        class="reset-btn"
+        onclick="return showResetMessage();"
+      />
+    </form>
+
+    <script>
+      function showSubmitMessage() {
+        const result = confirm("確定要送出報名資料嗎?");
+        if (result) {
+          alert("報名成功！");
+        }
+        return result;
+      }
+
+      function showResetMessage() {
+        const result = confirm("確定要清除重填嗎?");
+        if (result) return true;
+        return result;
+      }
+    </script>
+  </body>
+</html>
